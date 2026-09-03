@@ -218,7 +218,7 @@ int main()
 
 //--------------------------------------------------------------------------------
 
-// ATIVIDADE 2 - Faça um fluxograma para receber um número qualquer e informar na tela se é PAR ou ÍMPAR.
+/*/ ATIVIDADE 2 - Faça um fluxograma para receber um número qualquer e informar na tela se é PAR ou ÍMPAR.
 
 #include <stdio.h>
 
@@ -231,15 +231,197 @@ int main()
 
     if (num % 2 == 0)
     {
-        printf("Este numero e PAR!");
+        printf("Este numero e PAR!\n");
     }
     else
     {
-        printf("Este numero e IMPAR!");
+        printf("Este numero e IMPAR!\n");
     }
-    
-    
-    
+
     return 0;
+    
 }
+*/
+
+//-----------------------------------------------------------------------------------
+
+/*/ ATIVIDADE 3 - Faça um fluxograma que leia dois valores inteiros A e B, se os valores forem
+// iguais deverá somar os dois, caso contrário, multiplicar A por B. Ao final de
+// qualquer um dos cálculos deve-se atribuir o resultado para uma variável C e
+// mostrar seu conteúdo na tela.
+
+#include <stdio.h>
+
+int main()
+{
+    int a, b, c;
+
+    printf("Digite o primeiro numero: \n");
+    scanf("%d", &a);
+
+    printf("Digite o segundo numero: \n");
+    scanf("%d", &b);
+
+    if (a == b)
+    {
+        c = a + b;
+        printf("O resultado da soma e: %d", c);
+    }
+    else
+    {
+        c = a * b;
+        printf("O resultado da multiplicacao e: %d", c);
+    }
+
+    return 0;
+
+}*/
+
+// ---------------------------------------------------------------------------------------------
+
+/*// seja positivo e o seu triplo caso seja negativo, imprimindo o resultado.
+
+#include <stdio.h>
+
+int main()
+{
+    int numero1;
+
+    printf("Digite um numero positivo ou negativo: \n");
+    scanf("%d", &numero1);
+
+    if (numero1 < 0)
+    {
+        numero1 = numero1 * 3;
+        printf("Este numero e negativo!\n%d", numero1);
+    }
+    else
+    {
+        numero1 = numero1 * 2;
+        printf("Este numero e positivo!\n%d", numero1);
+    }
+
+    return 0;
+
+
+}
+*/
+
+// --------------------------------------------------------------------------------------------
+
+/*// ATIVIDADE 5 - Escreva um fluxograma que leia uma variável e some 5 caso seja par ou some 8
+// caso seja ímpar, imprima o resultado desta operação.
+
+#include <stdio.h>
+
+int main()
+{   
+    int num;
+
+    printf("Digite um numero par ou impar: \n");
+    scanf("%d", &num);
+
+    if (num % 2 == 0)
+    {
+        num = num + 5;
+        printf("Este numero e PAR e foi atribuido +5 no resultado: %d", num);
+    }
+    else
+    {
+        num = num + 8;
+        printf("Este numero e IMPAR e foi atribuido +8 no resultado: %d", num);
+    }
+
+}
+*/
+
+// -----------------------------------------------------------------------------------------------
+
+/* ATIVIDADE 6 - O IMC – Índice de Massa Corporal é um critério da Organização Mundial da
+Saúde para dar uma indicação sobre a condição de peso de uma pessoa adulta. A
+fórmula é IMC = peso/ (altura)². Elabore um fluxograma que leia o peso e a
+altura de um adulto e mostre sua condição de acordo com a tabela abaixo.
+Abaixo de 18,5 Abaixo do Peso
+Entre 18,5 e 25 Peso Normal
+Entre 25 e 30 Acima do Peso
+Acima de 30 Obeso */
+
+/*#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    float peso, altura, imc;
+
+    printf("\n-- CALCULADORA IMC --\n");
+
+
+    printf("Para calcular seu IMC digite seu peso: \n");
+    scanf("%f", &peso);
+
+    printf("Agora, digite sua altura: \n");
+    scanf("%f", &altura);
+
+    imc = peso / pow(altura, 2);
+
+    if (imc < 18.5)
+
+    {
+        printf("Voce esta abaixo do peso!\n%.1f", imc);
+    }
+
+    else if (imc >= 18.5 && imc <=25 )
+
+    {
+        printf("Voce esta no peso ideal!\n%.1f", imc);
+    }
+
+    else if (imc >=26 && imc <=30)
+
+    {
+        printf("Voce esta acima do peso\n%.1f", imc);
+    }
+
+    else
+    {
+        printf("Voce esta obeso(a)\n%.1f", imc);
+    }
+
+    return 0;
+
+}*/
+
+// --------------------------------------------------------------------------------------------------------------------
+
+/*Escreva um programa para ler 2 valores (considere que não serão
+informados valores iguais) e escrever o maior deles.*/
+/*
+#include <stdio.h>
+
+int main()
+{
+    int valor1, valor2;
+
+    printf("Informe o primeiro numero: \n");
+    scanf("%d", &valor1);
+
+    printf("Informe o segundo numero: \n");
+    scanf("%d", &valor2);
+
+
+    if (valor1 > valor2)
+    {
+        printf(" O maior numero e: %d", valor1);
+    }
+    else
+    {
+        printf("o maior numero e: %d", valor2);
+    }
+
+    return 0;
+
+}
+*/
+// --------------------------------------------------------------------------------------------------------------------
+
 
