@@ -424,4 +424,63 @@ int main()
 */
 // --------------------------------------------------------------------------------------------------------------------
 
+/*2. Escreva um programa para ler o ano de nascimento de uma pessoa e
+escrever uma mensagem que diga se ela poderá ou não votar este
+ano (não é necessário considerar o mês em que ela nasceu).*/
+/*
+#include <stdio.h>
+
+int main()
+{
+    int ano;
+    
+    printf("Digite seu ano de nascimento: \n");
+    scanf("%d", &ano);
+
+    if (ano > 2008)
+    {
+        printf("Desculpe, voce ainda nao pode votar!");
+    }
+    else if (ano < 2008)
+    {
+        printf("Voto registrado com sucesso!");
+    }
+
+    return 0;
+}
+*/
+// --------------------------------------------------------------------------------------------------------------------
+
+/*3. Escreva um programa que verifique a validade de uma senha fornecida
+pelo usuário. A senha válida é o número 1234. Devem ser impressas
+as seguintes mensagens:
+ACESSO PERMITIDO caso a senha seja válida.
+ACESSO NEGADO caso a senha seja inválida.*/
+/*
+#include <stdio.h>
+
+int main()
+{
+    int senha;
+
+    printf("--- DIGITE A SENHA PARA TER ACESSO ---\nR: ");
+    scanf("%d", &senha);
+
+    if (senha == 1234)
+    {
+        printf("ACESSO PERMITIDO");
+    }
+
+    else
+    {
+        printf("ACESSO NEGADO");
+    }
+
+    return 0;
+
+}
+
+*/
+// ------------------------------------------------------------------------------------------------------------------
+
 
