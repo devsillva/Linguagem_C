@@ -483,4 +483,185 @@ int main()
 */
 // ------------------------------------------------------------------------------------------------------------------
 
+/*4. As maçãs custam R$ 0,30 cada se forem compradas menos do que uma
+dúzia, e R$ 0,25 se forem compradas pelo menos doze. Escreva um
+programa que leia o número de maçãs compradas, calcule e escreva
+o valor total da compra.*/
+/*
+#include <stdio.h>
 
+int main()
+{
+    float maca;
+
+    printf("Digite quantas macas voce deseja:\nR: ");
+    scanf("%f", &maca);
+
+    if (maca >= 12)
+    {
+        maca = maca * 0.25;
+        printf("\nTOTAL DA COMPRA: %.2f Reais", maca);
+    }
+    else
+    {
+        maca = maca * 0.30;
+        printf("\nTOTAL DA COMPRA: %.2f Reais", maca);
+    }
+
+    return 0;
+}
+*/
+// -----------------------------------------------------------------------------------------------------------------
+
+/*5. Escreva um programa para ler 3 valores inteiros (considere que não
+serão lidos valores iguais) e escrevê-los em ordem crescente.*/
+/*
+
+#include <stdio.h>
+
+int main()
+{
+    int valor1, valor2, valor3;
+
+    printf("Digite o primeiro numero:\nR: ");
+    scanf("%d", &valor1);
+
+    printf("Digite o segundo numero:\nR: ");
+    scanf("%d", &valor2);
+
+    printf("Digite o terceiro numero:\nR: ");
+    scanf("%d", &valor3);
+
+    if (valor1 > valor2 && valor1 > valor3)
+    {
+        if (valor2 > valor3)
+        {
+            printf("O ranking ficou: %d, %d, %d", valor1, valor2, valor3);
+        }
+        else
+        {
+            printf("O ranking ficou: %d, %d, %d", valor1, valor3, valor2);
+        }
+
+    }
+    else if (valor2 > valor1 && valor2 > valor3)
+    {
+        if()
+    }
+
+    return 0;
+
+
+}
+
+*/
+
+// ---------------------------------------------------------------------------------------------------------
+
+/*DESAFIO ROBO - ATIVIDADE*/
+
+#include <stdio.h>
+#include <locale.h>
+
+
+
+int main()
+{   
+    setlocale(LC_ALL, "PT.BR_UTF-8");
+
+    int vida = 30, comida = 3, dias = 0, escolha;
+
+    while (vida > 0 && dias < 7)
+    {
+        do
+        {
+        printf(" ========== MENU ========== \n\n");
+        printf(" DIA %d NA FLORESTA\n", dias);
+        printf(" VIDA: %d\n", vida);
+        printf(" COMIDA: %d\n", comida);
+        printf(" ========================== \n\n");
+        printf(" Escolha sua acao para hoje:\n");
+        printf(" [1] - Cacar\n");
+        printf(" [2] - Comer\n");
+        printf(" [3] - Descansar\n\n");
+
+        printf("Escolha: ");
+        scanf("%d", &escolha);
+        }
+        while (escolha < 1 || escolha > 3);
+        
+
+        if (escolha == 1)
+        {
+            printf("\nVoce se arrisca em busca de suprimentos...\n");
+            comida = comida + 2;
+            vida = vida - 15;
+            if (vida <= 0)
+            {
+                vida = 0;
+            }
+            printf("Voce ganhou +2 unidades de comida, mas perde 15 pontos de vida devido aos perigos e ao cansaco da caca :c\n");
+            //printf("\nComida: %d\n", comida);
+            //printf("Vida: %d\n", vida);
+            //return;
+        }
+
+        else if (escolha == 2)
+        {
+            printf("\nVoce tenta se alimentar para recuperar energias...\n");
+            if (comida >= 1)
+            {
+                comida = comida - 1;
+                vida = vida + 10;
+                if (vida > 30)
+                {
+                    vida = 30;
+                }
+                printf("\nVoce se alimentou e isso aumentou sua vida para %d pontos!\n", vida);
+            }
+            else
+            {
+                printf("\nVoce nao tem mais mantimentos disponiveis!");
+                printf("\nVoce perdeu 20 de vida por conta da FOME!");
+                vida = vida - 20;
+            }
+        }
+
+        else if (escolha == 3)
+        {
+            printf("\nVoce decidiu poupar esforcos!\n");
+            vida = vida + 10;
+            if (vida > 30)
+            {
+                vida = 30;
+            }
+            printf("\nIsso aumentou 10 pontos de vida!");
+        }   
+
+        printf("\nO desgaste natural fez voce perder 5 pontos de vida por fome!\n");
+        vida = vida - 5;
+        dias = dias +1;
+        if (vida <= 0)
+        {
+            vida =0;
+        }
+        printf("\nVida atual: %d\n", vida);
+        printf("\nComida atual: %d\n", comida);
+        printf("\nDias sobrevividos: %d\n\n", dias);
+
+        if (vida > 0 && dias >= 7)
+        {
+            printf("Parabens! O resgate chegou e voce sobreviveu aos 7 dias na floresta!");
+        }
+        else if (vida <= 0)
+        {   
+            vida = 0;
+            printf("Voce sucumbiu aos perigos da floresta no dia %d. Fim de jogo!", dias);
+        }
+    
+    }
+    
+    return 0;
+
+
+}
