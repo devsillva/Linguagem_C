@@ -860,3 +860,186 @@ int main()
 /*Fatorial de N
 Leia um número N e calcule seu fatorial usando for. Ex: 5! = 120.*/
 
+// ------------------------------------------------------------------------------------------------------------
+/*
+#include <stdio.h>
+#include <stdbool.h>
+
+int main()
+{   
+    // i -> controla a quantidade de vezes que ira entrar no laço de repetição 
+    // num -> ira armazenar o valor que o usuario gostaria de descobrir se é primo
+    int i = 2, num;
+
+    bool isPrimo = false;
+
+    printf("Informe um valor para verificar se e primo!\n");
+    scanf("%d", &num);
+
+    while (i <num)
+    {
+
+        if (num % i == 0)
+        {
+            isNotPrimo = true;
+            break;
+        }
+        i++;
+
+    }
+
+if(isNotPrimo)
+{
+    printf("O numero nao e primo!\n");
+}
+else
+{
+    printf("O numero e primo!\n");
+}
+
+
+
+}   
+
+*/
+
+// -----------------------------------------------------------------------------------------------------------------------------------
+
+/*
+ Faça um jogo que irá receber uma senha: 9753. 
+ Durante o jogo o usuário irá informar um valor para descobrir o primeiro número e, 
+ caso o número não seja o valor digitado, o sistema deverá informar se o primeiro valor é maior ou menor. 
+ Caso o usuário descubra o primeiro valor, o sistema deverá seguir para o próximo número até o usuário descobrir os 4 dígitos.*/
+
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <time.h>
+
+ int main()
+ {  
+    srand(time(NULL));
+
+    int resp;    
+    int s1 = rand() % 10;
+    int s2 = rand() % 10;
+    int s3 = rand() % 10;
+    int s4 = rand() % 10;
+
+    printf("\n === JOGO DA SENHA === \n");
+
+    // PRIMEIRO NUMERO DA SENHA
+
+    while (resp != s1)
+    {
+        printf("\nTente adivinhar o primeiro numero:\nR:");
+        scanf("%d", &resp);
+
+        
+        if (resp < 0 || resp > 9)
+        {
+            printf("\nO numero deve ser entre 0 e 9!\n");
+        }
+        else if (resp < s1)
+        {
+            printf("\nO primeiro numero e MAIOR que o numero %d\n", resp);
+        }
+        else if (resp > s1)
+        {
+            printf("\nO primeiro numero e MENOR que o numero %d\n", resp);
+        }
+        else
+        {
+            printf("\nVoce acertou! O primeiro numero e: %d\n", s1);
+        }    
+    }
+
+    // SEGUNDO NUMERO DA SENHA
+
+    while (resp != s2)
+    {
+        printf("\nTente adivinhar o segundo numero:\nR:");
+        scanf("%d", &resp);
+
+        
+        if (resp < 0 || resp > 9)
+        {
+            printf("\nO numero deve ser entre 0 e 9!\n");
+        }
+        else if (resp < s2)
+        {
+            printf("\nO segundo numero e MAIOR que o numero %d\n", resp);
+        }
+        else if (resp > s2)
+        {
+            printf("\nO segundo numero e MENOR que o numero %d\n", resp);
+        }
+        else
+        {
+            printf("\nVoce acertou! O segundo numero e: %d\n", s2);
+        }    
+    }
+
+    // TERCEIRO NUMERO DA SENHA
+
+    while (resp != s3)
+    {
+        printf("\nTente adivinhar o terceiro numero:\nR:");
+        scanf("%d", &resp);
+
+        
+        if (resp < 0 || resp > 9)
+        {
+            printf("\nO numero deve ser entre 0 e 9!\n");
+        }
+        else if (resp < s3)
+        {
+            printf("\nO terceiro numero e MAIOR que o numero %d\n", resp);
+        }
+        else if (resp > s3)
+        {
+            printf("\nO terceiro numero e MENOR que o numero %d\n", resp);
+        }
+        else
+        {
+            printf("\nVoce acertou! O terceiro numero e: %d\n", s3);
+        }    
+    }
+
+    // QUARTO NUMERO DA SENHA
+
+    while (resp != s4)
+    {
+        printf("\nTente adivinhar o quarto e ULTIMO numero:\nR:");
+        scanf("%d", &resp);
+
+        
+        if (resp < 0 || resp > 9)
+        {
+            printf("\nO numero deve ser entre 0 e 9!\n");
+        }
+        else if (resp < s4)
+        {
+            printf("\nO quarto numero e MAIOR que o numero %d\n", resp);
+        }
+        else if (resp > s4)
+        {
+            printf("\nO quarto numero e MENOR que o numero %d\n", resp);
+        }
+        else
+        {
+            printf("\nVoce acertou! O quarto numero e: %d\n", s4);
+        }    
+    }
+
+
+
+    printf("\nParabens, voce descobriu a senha!\n");
+    printf("A senha era: %d, %d, %d, %d", s1, s2, s3, s4);
+
+    return 0;
+    
+
+
+
+
+ }
