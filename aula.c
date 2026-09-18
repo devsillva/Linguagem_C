@@ -1063,3 +1063,52 @@ else
 
  }
 */
+// ==========================================================================================================================
+
+/*1 - Faça um programa que receba dois números e execute as operações listadas a seguir de acordo com a escolha do usuário:
+   1 - Média entre os números digitados
+    2 - Diferença do maior pelo menor
+    3 - Produto entre os números digitados
+    4 - Divisão do primeiro pelo segundo
+*/
+
+#include <stdio.h>
+
+int main()
+{
+    int num1,num2;
+
+    printf("Digite o primeiro numero:\nR:");
+    scanf("%d", &num1);
+
+    printf("\nDigite o segundo numero:\nR:");
+    scanf("%d", &num2);
+
+    int media = (num1 + num2) / 2;
+
+    printf("A media dos dois numeros e: %d", media);
+
+    if (num1 > num2)
+    {
+        int dif1 = num1 - num2;
+        printf("\nO primeiro numero tem uma diferenca de +%d", dif1);
+    }
+
+    else if (num2 > num1)
+    {
+        int dif2 = num2 - num1;
+        printf("\nO segundo numero tem uma diferenca de +%d", dif2);
+    }
+
+    int mult = num1 * num2;
+
+    printf("\nO resultado da multiplicacao dos numeros e: %d", mult);
+
+    int div = num1 / num2;
+
+    printf("\nO resultado da divisao do primeiro numero para o segundo e: %d", div);
+
+
+    return 0;
+}
+
