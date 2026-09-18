@@ -910,7 +910,7 @@ else
  Durante o jogo o usuário irá informar um valor para descobrir o primeiro número e, 
  caso o número não seja o valor digitado, o sistema deverá informar se o primeiro valor é maior ou menor. 
  Caso o usuário descubra o primeiro valor, o sistema deverá seguir para o próximo número até o usuário descobrir os 4 dígitos.*/
-
+/*
  #include <stdio.h>
  #include <stdlib.h>
  #include <time.h>
@@ -1043,3 +1043,23 @@ else
 
 
  }
+
+ */
+
+ // =======================================================================================================================
+/*
+ #include <stdio.h>
+
+ int main()
+ {
+    char letra = 'a';
+    while(letra <= 'z')
+    {   
+        printf("%c\n", letra);
+        letra++;
+    }
+
+    return 0;
+
+ }
+*/
